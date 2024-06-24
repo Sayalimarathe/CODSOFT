@@ -12,17 +12,14 @@ def newTask():
 def deleteTask():
     lb.delete(ANCHOR)
 
-
 ws = Tk()
 ws.geometry('450x400+500+200')
 ws.title('To-Do List App')     
 ws.config(bg='#2471A3')
 ws.resizable(width=False, height=False)
 
-
 frame = Frame(ws)
 frame.pack(pady=10)
-
 
 lb = Listbox(
     frame,
@@ -34,14 +31,13 @@ lb = Listbox(
     highlightthickness=0,
     selectbackground='#AED6F1',
     activestyle="none",
-
 )
 lb.pack(side=LEFT, fill=BOTH)
 
 task_list =[
-    "Drink 4litres of Water",
-    "Eat Apple",
-    "Go Gym"
+    "Good Morning",
+    "Good Afternoon",
+    "Good Night"
 ]
 
 for item in task_list:
@@ -55,13 +51,13 @@ sb.config(command=lb.yview)
 
 my_entry = Entry(
     ws,
-    font=('times', 24)
+    font=('times', 22)
 )
 
-my_entry.pack(pady=20)
+my_entry.pack(pady=18)
 
 button_frame = Frame(ws)
-button_frame.pack(pady=20)
+button_frame.pack(pady=18)
 
 addTask_btn = Button(
     button_frame,
@@ -79,7 +75,7 @@ addTask_btn.pack(fill=BOTH, expand=TRUE, side=LEFT)
 delTask_btn= Button(
     button_frame,
     text='Delete Task',
-    font=('times 14'),
+    font=('times 16'),
     bg='#F9E79F',
     padx=20,
     pady=10,
